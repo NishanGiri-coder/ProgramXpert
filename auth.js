@@ -6,7 +6,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAzpAddeNpJK0etyGByEgOhmXLRCEiD8vg",
+  apiKey: "",
   authDomain: "programxperts.firebaseapp.com",
   projectId: "programxperts",
   storageBucket: "programxperts.firebasestorage.app",
@@ -14,6 +14,7 @@ const firebaseConfig = {
   appId: "1:792221592009:web:ec20665c502a243077e018",
   measurementId: "G-5R3NDCH5Q4"
 };
+;
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
