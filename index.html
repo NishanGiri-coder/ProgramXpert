@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ProgramXpert</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:250px;font-weight:bold;" id="mySidebar"><br>
+  <div class="logo-container">
+    <div class="logo-container">
+      <img src="Program.png" alt="Logo" class="logo">
+    </div>
+    
+</div>
+
+        <div class="marquee">
+          <span>Learn C | Learn C++ | Learn JS | Learn Python</span>
+        </div>
+      </a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>ProgramXpert</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Home</a> 
+    <a href="c.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Learn C</a> 
+    <a href="c++.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Learn C++</a> 
+    <a href="js.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Learn Js</a> 
+    <a href="python.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Learn Python</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Contact</a>
+    <a href="form.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">LogOut</a>
+
+
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" 
+   class="w3-button w3-red w3-margin-right" 
+   onclick="w3_open()">☰</a>
+
+  <span>ProgramXpert</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo" style="display: inline-block; text-align: center;"><b>Future Coder</b></h1>
+    <hr style="width:100%px;border:5px solid red" class="w3-round">
+   <br><br><br>
+    <form autocomplete="off" action="/action_page.php">
+        <div class="autocomplete" style="width:300px;">
+          <input id="myInput" type="text" name="myCountry" placeholder="Search our tutorials. . . .">
+        </div>
+      </form>
+      <br><br><br>
+  
+  </div>
+  
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <div class="hello-container">
+        <h3 id="dynamic-hello"></h3>
+
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Resources</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>At ProgramXpert, we are committed to helping you grow as a developer with a wide range of coding resources that cater to all skill levels. Whether you're just starting out or looking to refine your skills, we offer the following to guide your learning journey:</p>
+    <p>Code Tutorials: Step-by-step lessons covering a variety of programming languages and frameworks.<br><br>
+        Code Snippets: Handy snippets to help you save time and implement solutions more efficiently.<br><br>
+    <p>Code Tutorials: Step-by-step lessons covering a variety of programming languages and frameworks.<br><br>
+        Coding Challenges: Practice coding problems to enhance your problem-solving abilities and prepare for technical interviews.
+    <p>Code Tutorials: Step-by-step lessons covering a variety of programming languages and frameworks.<br><br>
+        Project Ideas: Build real-world projects that sharpen your skills and showcase your talent.<br><br>
+        Algorithm Examples: Learn important algorithms and how to implement them in code.<br><br>
+        Debugging Tips: Understand common errors and how to troubleshoot your code effectively.<br><br>
+        ProgramXpert provides everything you need to learn, practice, and master coding in an organized and accessible way.
+        
+        
+    </p>
+  </div>
+  
+
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Courses Overview</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>At ProgramXpert, we offer an array of courses designed to help you master the most in-demand programming languages, from beginner to advanced levels. Whether you're just starting your coding journey or looking to expand your knowledge, we have something for everyone.</p>
+    <p><p style="font-size: 25px;"><strong>Our Courses</strong></p>
+
+    <p><strong>Learn C</strong><br>
+    C is one of the foundational programming languages that have influenced many modern languages. Our <strong>Learn C</strong> course covers key concepts like variables, data types, control structures, functions, and memory management. Whether you're new to programming or looking to strengthen your foundation, this course is perfect for you.</p>
+    
+    <p><strong>Learn C++</strong><br>
+    Building on C, <strong>C++</strong> introduces object-oriented concepts such as classes, inheritance, and polymorphism. This course covers both procedural and object-oriented programming, making it ideal for those looking to advance their skills and dive into topics like data structures, algorithms, and memory management.</p>
+    
+    <p><strong>Learn JavaScript (JS)</strong><br>
+    JavaScript powers the interactive elements of modern websites. In our <strong>Learn JavaScript</strong> course, you'll learn everything from basic scripting to advanced topics like asynchronous programming, DOM manipulation, and building dynamic web applications. Perfect for anyone looking to develop web apps or enhance their front-end development skills.</p>
+    
+    <p><strong>Learn Python</strong><br>
+    Python’s simplicity and versatility make it a go-to language for many industries, from web development to data science. Our <strong>Learn Python</strong> course covers everything from basic syntax and data types to advanced topics like machine learning and web frameworks, providing a solid foundation for beginners and those looking to explore Python’s full potential.</p>
+    
+    <p><strong>What You'll Gain</strong><br>
+    Each course at <strong>ProgramXpert</strong> is designed to be hands-on and practical. You'll:<br>
+    - Learn to write clean, efficient code.<br>
+    - Gain a deep understanding of core programming concepts.<br>
+    - Build projects that can be showcased to employers.<br>
+    - Improve your problem-solving abilities with real-world coding challenges.</p>
+    
+    <p><strong>Start Your Learning Journey Today!</strong><br>
+    Choose your path, explore our detailed courses, and start learning at your own pace. Whether you're pursuing a career in software development or simply want to improve your coding skills, <strong>ProgramXpert</strong> will guide you every step of the way.</p>
+    
+    </p>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-half programxpert-card">
+      <img src="image3.jpg" style="width:100%" onclick="onClick(this)" alt="ProgramXpert">
+      <br><br><br>
+    </div>
+  </div>
+    <div class="w3-container" id="key-features" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Key Features.</b></h1>
+        <hr style="width:50px;border:5px solid red" class="w3-round">
+        <p>Discover the unique features that set ProgramXpert apart. We offer interactive learning, hands-on projects, and a structured approach to help you become proficient in programming languages.</p>
+    </div>
+    
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-light-grey w3-center">
+                <li class="w3-dark-grey w3-xlarge w3-padding-32">Comprehensive Learning</li>
+                <li class="w3-padding-16">In-depth lessons covering theory and practical aspects</li>
+                <li class="w3-padding-16">Real-world examples for better understanding</li>
+                <li class="w3-padding-16">Step-by-step guidance for beginners</li>
+                <li class="w3-padding-16">Hands-on projects to apply learned concepts</li>
+                <li class="w3-padding-16">Interactive coding challenges for problem-solving</li>
+                <li class="w3-padding-16">
+                    <h2>Unlimited Access</h2>
+                    <span class="w3-opacity">Access all courses at any time</span>
+                </li>
+                <li class="w3-light-grey w3-padding-24">
+                  <a href="form2.html">
+                    <button class="w3-button w3-white w3-padding-large w3-hover-black">Get Started</button>
+                  </a>
+                  
+                </li>
+            </ul>
+        </div>
+
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p style="font-size: 1.3em;">Just feel free to message us.</p>
+    <form action="mailto:nishangiri.codes@gmail.com" method="post" enctype="text/plain">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <textarea class="w3-input w3-border" name="Message" required rows="2"></textarea>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+      </form>
+      
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+<script src="search.js"></script>
+<!-- Footer -->
+<footer class="w3-container w3-red w3-center w3-margin-top" style="padding: 20px; position: relative; bottom: 0; width: 100%;">
+  <p style="margin: 0;">&copy;2025 ProgramXpert All rights reserved.</p>
+  <div>
+    <a href="terms.html" class="w3-button w3-hover-white w3-padding-small" style="margin-right: 5px; text-decoration-line: underline;">Terms and Conditions</a>
+    <a href="privacy-policy.html" class="w3-button w3-hover-white w3-padding-small" style="margin-right: 5px; text-decoration: underline;">Privacy Policy</a>
+  </div>
+</footer>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ProgramXpert</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="styles3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px; overflow: hidden;">
+    <div class="marquee">
+      <span>Learn C | Learn C++ | Learn JS | Learn Python</span>
+    </div>
+  </a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64" style="color: white; font-size: 1.5em;"><b>ProgramXpert</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="javascript:void(0);" onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">
+      <i class="fas fa-arrow-left"></i> Back
+  </a>
+  <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Introduction</a> 
+  <a href="#variables" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Variables</a> 
+  <a href="#operators" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Operators</a> 
+  <a href="#functions" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Functions</a>
+  <a href="#arrays" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Arrays</a> 
+  <a href="#objects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Objects</a>
+  <a href="#events" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Events</a> 
+  <a href="#advanced" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Advanced Topics</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>ProgramXpert</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Introduction Section -->
+<div class="container" id="introduction">
+  <h2 style="padding-top: 30px;">Introduction to JavaScript</h2>
+  <p>JavaScript is a high-level, dynamic programming language commonly used for web development. It allows developers to add interactivity to web pages, manipulate the DOM, and handle asynchronous events.</p>
+  
+  <h3>Basic Syntax</h3>
+  <p>A basic JavaScript program structure looks like this:</p>
+  <pre>
+console.log("Hello, World!");
+  </pre>
+  <p>This program logs the message "Hello, World!" to the console.</p>
+</div>
+
+<!-- Variables Section -->
+<div class="container" id="variables">
+  <h2>Variables in JavaScript</h2>
+  <p>Variables in JavaScript are used to store data. You can declare variables using <code>let</code>, <code>const</code>, or <code>var</code>.</p>
+  
+  <h3>Example</h3>
+  <pre>
+let x = 10;
+const y = 20;
+var z = 30;
+  </pre>
+  <p>Here, <code>x</code> is a variable that can be reassigned, <code>y</code> is a constant (its value cannot be changed), and <code>z</code> is a variable declared using <code>var</code>.</p>
+</div>
+
+<!-- Operators Section -->
+<div class="container" id="operators">
+  <h2>Operators in JavaScript</h2>
+  <p>JavaScript operators are used to perform operations on variables and values. Common operators include arithmetic, assignment, and comparison operators.</p>
+  
+  <h3>Arithmetic Operators</h3>
+  <ul>
+    <li><strong>+</strong> Addition</li>
+    <li><strong>-</strong> Subtraction</li>
+    <li><strong>*</strong> Multiplication</li>
+    <li><strong>/</strong> Division</li>
+    <li><strong>%</strong> Modulus (remainder)</li>
+  </ul>
+  
+  <h3>Example</h3>
+  <pre>
+let a = 5, b = 2;
+let result = a + b; // result is 7
+  </pre>
+</div>
+
+<!-- Functions Section -->
+<div class="container" id="functions">
+  <h2>Functions in JavaScript</h2>
+  <p>Functions in JavaScript allow you to encapsulate code into reusable blocks.</p>
+  
+  <h3>Function Declaration Example</h3>
+  <pre>
+function add(a, b) {
+  return a + b;
+}
+
+let result = add(5, 3);
+console.log(result); // Output: 8
+  </pre>
+</div>
+
+<!-- Arrays Section -->
+<div class="container" id="arrays">
+  <h2>Arrays in JavaScript</h2>
+  <p>Arrays in JavaScript are used to store multiple values in a single variable.</p>
+  
+  <h3>Array Example</h3>
+  <pre>
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[2]); // Output: 3
+  </pre>
+</div>
+
+<!-- Objects Section -->
+<div class="container" id="objects">
+  <h2>Objects in JavaScript</h2>
+  <p>Objects in JavaScript are used to store collections of data as key-value pairs.</p>
+  
+  <h3>Object Example</h3>
+  <pre>
+let person = {
+  name: "John",
+  age: 30
+};
+console.log(person.name); // Output: John
+  </pre>
+</div>
+
+<!-- Events Section -->
+<div class="container" id="events">
+  <h2>Events in JavaScript</h2>
+  <p>Events in JavaScript allow you to interact with the user through actions such as clicking a button, submitting a form, or hovering over an element.</p>
+  
+  <h3>Event Listener Example</h3>
+  <pre>
+let button = document.querySelector("button");
+button.addEventListener("click", function() {
+  alert("Button clicked!");
+});
+  </pre>
+</div>
+
+<!-- Advanced Topics Section -->
+<div class="container" id="advanced">
+  <h2>Advanced Topics in JavaScript</h2>
+  <p>Advanced topics in JavaScript include asynchronous programming with callbacks, promises, and async/await, as well as working with APIs and frameworks like React.</p>
+  
+  <h3>Async/Await Example</h3>
+  <pre>
+async function fetchData() {
+  let response = await fetch('https://api.example.com/data');
+  let data = await response.json();
+  console.log(data);
+}
+fetchData();
+  </pre>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

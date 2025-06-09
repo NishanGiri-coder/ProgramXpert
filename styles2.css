@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  perspective: 1500px; /* Add perspective to give 3D effect */
+}
+
+/* Marquee Style */
+.marquee {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Form Styles */
+.container {
+  width: 100%;
+  max-width: 400px;
+  height: auto; /* Adjust to content height */
+  min-height: 400px; /* Ensure a minimum height */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transform: perspective(1500px) rotateX(5deg) rotateY(5deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: perspective(1500px) rotateX(0deg) rotateY(0deg) scale(1.05); /* Scale effect on hover */
+}
+
+.form-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Text shadow for 3D effect */
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+  transition: all 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on focus */
+  transform: translateY(-3px); /* Slight lift effect on focus */
+}
+
+input[type="button"].btn {
+  background-color: DodgerBlue;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 3D button shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="button"].btn:hover {
+  background-color: #1e7bbf;
+  transform: translateY(-3px); /* Button lifts on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.or {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.links {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 15px;
+}
+
+.links button {
+  background-color: transparent;
+  border: none;
+  color: DodgerBlue;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  transition: transform 0.3s ease-in-out;
+}
+
+.links button:hover {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.messageDiv {
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #1500ff;
+  color: #ffffff;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 3D shadow for message box */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .form-title {
+    font-size: 22px; /* Slightly reduce title font size */
+    margin-bottom: 25px;
+  }
+
+  .input-group {
+    margin-bottom: 25px; /* Add more spacing between inputs */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .form-title {
+    font-size: 20px; /* Smaller font size for very small screens */
+    margin-bottom: 30px;
+  }
+
+  .input-group {
+    margin-bottom: 30px; /* Increase space between input fields */
+  }
+
+  .links {
+    font-size: 12px; /* Reduce font size for links */
+    padding-top: 20px;
+  }
+}

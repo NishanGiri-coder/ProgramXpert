@@ -1,0 +1,198 @@
+
+.marquee {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 5s linear infinite; /* Reduced the time to 5 seconds */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+/* General Styles */
+body, h1, h2, h3, h4, h5 {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.w3-sidebar {
+    position: fixed; /* Sidebar stays in place */
+    z-index: 3;
+    width: 300px; /* Sidebar width */
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #5f36f4; /* Red background */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.w3-sidebar.hide {
+    transform: translateX(-300px); /* Hide the sidebar off-screen */
+}
+
+/* Main Content */
+.w3-main {
+    flex: 1;
+    margin-left: 0; /* Default margin set to 0 */
+    margin-right: 40px;
+    padding-top: 20px;
+    transition: margin-left 0.3s ease; /* Smooth transition for when sidebar is toggled */
+}
+
+/* Footer */
+footer {
+    background-color: #f44336; /* Red */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Default position */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Custom Container Styles */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.prog {
+    color: #f0f8ff;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+pre {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+/* Example Box */
+.example {
+    background-color: #f0f8ff;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.example h3 {
+    margin-top: 0;
+}
+
+/* Code Styling */
+code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #e6e6e6;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .w3-sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .w3-main {
+        margin-left: 0; /* Remove left margin for small screens */
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    pre {
+        font-size: 14px;
+    }
+}
+
+/* For larger screens (above 992px) */
+@media (min-width: 992px) {
+    /* Sidebar stays visible and the content adjusts */
+    .w3-sidebar {
+        position: fixed; /* Keeps the sidebar in place */
+        display: block; /* Ensure it's always visible */
+        width: 250px; /* Smaller width for sidebar */
+    }
+
+    .w3-main {
+        margin-left: 250px; /* Adjust content width */
+        margin-right: 40px;
+    }
+
+    .container {
+        width: 50%; /* Adjust container width for larger screens */
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+}
+

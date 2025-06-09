@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ProgramXpert</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="styles3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px; overflow: hidden;">
+    <div class="marquee">
+      <span>Learn C | Learn C++ | Learn JS | Learn Python</span>
+    </div>
+  </a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64" style="color: white; font-size: 1.5em;"><b>ProgramXpert</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="javascript:void(0);" onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+    <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Introduction</a> 
+    <a href="#variables" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Variables</a> 
+    <a href="#operators" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Operators</a> 
+    <a href="#control-flow" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Control Flow</a> 
+    <a href="#functions" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Functions</a>
+    <a href="#arrays" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Arrays</a> 
+    <a href="#pointers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Pointers</a>
+    <a href="#structures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Structures</a>
+    <a href="#advanced" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Advanced Topics</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>ProgramXpert</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Introduction Section -->
+<div class="container" id="introduction">
+  <h2 style="padding-top: 30px;">Introduction to C Language</h2>
+  <p>C is a high-level, general-purpose programming language that is widely used for system and application development. It is known for its efficiency and flexibility in low-level programming.</p>
+  
+  <h3>Basic Syntax</h3>
+  <p>A simple C program structure looks like this:</p>
+  <pre>
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+  </pre>
+  <p>This program prints "Hello, World!" to the console using the <code>printf()</code> function.</p>
+</div>
+
+<!-- Variables Section -->
+<div class="container" id="variables">
+  <h2>Variables and Data Types</h2>
+  <p>In C, variables are used to store data values. C requires you to declare the type of variable before using it. Some common data types include:</p>
+  
+  <h3>Common Data Types</h3>
+  <ul>
+    <li><strong>int</strong> - Used for integers (e.g., 1, 2, -5)</li>
+    <li><strong>float</strong> - Used for floating-point numbers (e.g., 3.14, -2.5)</li>
+    <li><strong>char</strong> - Used for characters (e.g., 'a', 'b')</li>
+  </ul>
+  
+  <h3>Example</h3>
+  <pre>
+int a = 10;
+float b = 5.5;
+char c = 'A';
+  </pre>
+</div>
+
+<!-- Operators Section -->
+<div class="container" id="operators">
+  <h2>Operators in C</h2>
+  <p>Operators in C allow you to perform various operations on data, such as arithmetic, relational, and logical operations.</p>
+  
+  <h3>Arithmetic Operators</h3>
+  <p>These operators perform basic arithmetic operations:</p>
+  <ul>
+    <li><strong>+</strong> Addition</li>
+    <li><strong>-</strong> Subtraction</li>
+    <li><strong>*</strong> Multiplication</li>
+    <li><strong>/</strong> Division</li>
+    <li><strong>%</strong> Modulus (remainder)</li>
+  </ul>
+  
+  <h3>Example</h3>
+  <pre>
+int a = 5;
+int b = 2;
+int result = a + b;  // result is 7
+  </pre>
+</div>
+
+<!-- Control Flow Section -->
+<div class="container" id="control-flow">
+  <h2>Control Flow</h2>
+  <p>Control flow statements in C manage the flow of the program's execution. Common control flow statements include <code>if</code>, <code>else</code>, and loops (e.g., <code>for</code>, <code>while</code>).</p>
+  
+  <h3>if-else Example</h3>
+  <pre>
+int a = 10;
+if (a > 5) {
+    printf("a is greater than 5");
+} else {
+    printf("a is less than or equal to 5");
+}
+  </pre>
+</div>
+
+<!-- Functions Section -->
+<div class="container" id="functions">
+  <h2>Functions in C</h2>
+  <p>Functions allow you to break down the code into reusable blocks. Functions in C are declared with a return type, followed by the function name and parameters.</p>
+  
+  <h3>Function Example</h3>
+  <pre>
+#include <stdio.h>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);
+    printf("%d\n", result);  // Output: 8
+    return 0;
+}
+  </pre>
+</div>
+
+<!-- Arrays Section -->
+<div class="container" id="arrays">
+  <h2>Arrays in C</h2>
+  <p>Arrays store multiple values of the same type in a single variable. Arrays in C are fixed in size once declared.</p>
+  
+  <h3>Array Example</h3>
+  <pre>
+int numbers[5] = {1, 2, 3, 4, 5};
+printf("%d\n", numbers[2]);  // Output: 3
+  </pre>
+</div>
+
+<!-- Pointers Section -->
+<div class="container" id="pointers">
+  <h2>Pointers in C</h2>
+  <p>Pointers are variables that store the memory address of another variable. They are powerful tools for managing memory in C.</p>
+  
+  <h3>Pointer Example</h3>
+  <pre>
+int a = 10;
+int *p = &a;
+printf("%d\n", *p);  // Output: 10
+  </pre>
+</div>
+
+<!-- Structures Section -->
+<div class="container" id="structures">
+  <h2>Structures in C</h2>
+  <p>Structures allow you to group different data types together into a single unit. A structure is defined using the <code>struct</code> keyword.</p>
+  
+  <h3>Structure Example</h3>
+  <pre>
+struct Person {
+    char name[20];
+    int age;
+};
+
+struct Person p1;
+p1.age = 30;
+strcpy(p1.name, "John");
+printf("%s is %d years old.\n", p1.name, p1.age);
+  </pre>
+</div>
+
+<!-- Advanced Topics Section -->
+<div class="container" id="advanced">
+  <h2>Advanced Topics in C</h2>
+  <p>Advanced topics in C include file handling, dynamic memory allocation, and multi-threading.</p>
+  
+  <h3>Dynamic Memory Allocation Example</h3>
+  <pre>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *arr = (int*) malloc(5 * sizeof(int));
+    for (int i = 0; i < 5; i++) {
+        arr[i] = i * 10;
+    }
+    free(arr);
+    return 0;
+}
+  </pre>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

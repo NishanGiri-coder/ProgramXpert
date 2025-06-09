@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ProgramXpert</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="styles3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px; overflow: hidden;">
+    <div class="marquee">
+      <span>Learn C++ | Learn C | Learn JS | Learn Python</span>
+    </div>
+  </a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64" style="color: white; font-size: 1.5em;"><b>ProgramXpert</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="javascript:void(0);" onclick="window.location.href='index.html';" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">
+      <i class="fas fa-arrow-left"></i> Back
+  </a>
+     
+    <a href="#introduction" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Introduction</a> 
+    <a href="#variables" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Variables</a> 
+    <a href="#operators" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Operators</a> 
+    <a href="#control-flow" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Control Flow</a> 
+    <a href="#functions" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Functions</a>
+    <a href="#arrays" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Arrays</a> 
+    <a href="#pointers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Pointers</a>
+    <a href="#classes" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Classes</a>
+    <a href="#memory-allocation" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Memory Allocation</a>
+    <a href="#advance" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style="border-radius: 40px; width: fit-content;">Advanced Topics</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+  <span>ProgramXpert</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Introduction Section -->
+<div class="container" id="introduction">
+  <h2 style="padding-top: 30px;">Introduction to C++ Language</h2>
+  <p>C++ is an object-oriented programming language developed by Bjarne Stroustrup in the early 1980s. It is widely used for system and application software development.</p>
+  
+  <h3>Basic Syntax</h3>
+  <p>A simple C++ program structure is as follows:</p>
+  <pre>
+#include <iostream>
+
+int main() {
+  std::cout << "Hello, World!";
+  return 0;
+}
+  </pre>
+  <p>The program starts from the <code>main()</code> function, which outputs "Hello, World!" to the console using <code>std::cout</code>.</p>
+</div>
+
+<!-- Variables Section -->
+<div class="container" id="variables">
+  <h2>Variables and Data Types</h2>
+  <p>In C++, variables are used to store data values. Each variable has a type that determines what kind of data it can store.</p>
+  
+  <h3>Common Data Types</h3>
+  <ul>
+    <li><strong>int</strong> - Used for storing integers (e.g., 1, 2, -5)</li>
+    <li><strong>float</strong> - Used for storing floating-point numbers (e.g., 3.14, -2.5)</li>
+    <li><strong>char</strong> - Used for storing a single character (e.g., 'A', 'b')</li>
+  </ul>
+  
+  <h3>Example</h3>
+  <pre>
+int a = 10;
+float b = 5.5;
+char c = 'A';
+  </pre>
+</div>
+
+<!-- Operators Section -->
+<div class="container" id="operators">
+  <h2>Operators in C++</h2>
+  <p>Operators are symbols used to perform operations on variables and values. They include arithmetic, relational, and logical operators.</p>
+  
+  <h3>Arithmetic Operators</h3>
+  <p>These operators perform basic arithmetic operations:</p>
+  <ul>
+    <li><strong>+</strong> Addition</li>
+    <li><strong>-</strong> Subtraction</li>
+    <li><strong>*</strong> Multiplication</li>
+    <li><strong>/</strong> Division</li>
+    <li><strong>%</strong> Modulus (remainder)</li>
+  </ul>
+  
+  <h3>Example</h3>
+  <pre>
+int a = 5, b = 2;
+int result = a + b; // result is 7
+  </pre>
+</div>
+
+<!-- Control Flow Section -->
+<div class="container" id="control-flow">
+  <h2>Control Flow</h2>
+  <p>Control flow statements manage the order in which code executes. Common control flow statements include <code>if</code>, <code>else</code>, and loops (e.g., <code>for</code>, <code>while</code>).</p>
+  
+  <h3>if-else Example</h3>
+  <pre>
+int a = 10;
+if (a > 5) {
+  std::cout << "a is greater than 5";
+} else {
+  std::cout << "a is less than or equal to 5";
+}
+  </pre>
+</div>
+
+<!-- Functions Section -->
+<div class="container" id="functions">
+  <h2>Functions in C++</h2>
+  <p>Functions allow us to group code into reusable blocks, making programs more modular.</p>
+  
+  <h3>Function Declaration Example</h3>
+  <pre>
+int add(int a, int b) {
+  return a + b;
+}
+
+int result = add(5, 3);
+std::cout << result; // Output: 8
+  </pre>
+</div>
+
+<!-- Arrays Section -->
+<div class="container" id="arrays">
+  <h2>Arrays in C++</h2>
+  <p>Arrays store multiple values of the same type in a single variable.</p>
+  
+  <h3>Array Example</h3>
+  <pre>
+int numbers[5] = {1, 2, 3, 4, 5};
+std::cout << numbers[2]; // Output: 3
+  </pre>
+</div>
+
+<!-- Pointers Section -->
+<div class="container" id="pointers">
+  <h2>Pointers in C++</h2>
+  <p>Pointers store the memory address of a variable, allowing for dynamic memory manipulation.</p>
+  
+  <h3>Pointer Example</h3>
+  <pre>
+int a = 10;
+int *ptr = &a;
+std::cout << *ptr; // Output: 10
+  </pre>
+</div>
+
+<!-- Classes Section -->
+<div class="container" id="classes">
+  <h2>Classes in C++</h2>
+  <p>Classes are the building blocks of object-oriented programming in C++. They allow you to define your own data types that can have both properties and behaviors.</p>
+  
+  <h3>Class Example</h3>
+  <pre>
+class MyClass {
+public:
+  int myNumber;
+  void display() {
+    std::cout << myNumber;
+  }
+};
+MyClass obj;
+obj.myNumber = 5;
+obj.display(); // Output: 5
+  </pre>
+</div>
+
+<!-- Memory Allocation Section -->
+<div class="container" id="memory-allocation">
+  <h2>Dynamic Memory Allocation</h2>
+  <p>Dynamic memory allocation allows programs to allocate memory during runtime, using functions like <code>new</code> and <code>delete</code>.</p>
+  
+  <h3>Example of new</h3>
+  <pre>
+int* ptr = new int[5];
+ptr[0] = 10;
+delete[] ptr;
+  </pre>
+</div>
+
+<!-- Advanced Topics Section -->
+<div class="container" id="advance">
+  <h2>Advanced Topics in C++</h2>
+  <p>Advanced topics include inheritance, polymorphism, and templates.</p>
+  
+  <h3>Inheritance Example</h3>
+  <pre>
+class Animal {
+public:
+  void speak() {
+    std::cout << "Animal speaks";
+  }
+};
+
+class Dog : public Animal {
+public:
+  void speak() {
+    std::cout << "Dog barks";
+  }
+};
+Dog d;
+d.speak(); // Output: Dog barks
+  </pre>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

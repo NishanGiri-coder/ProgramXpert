@@ -1,0 +1,332 @@
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 16px Arial;
+}
+
+/* Side navigation styles */
+.side-nav {
+  width: 250px; /* Set the width of the side nav */
+  background-color: #111;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+/* Links inside the side nav */
+.side-nav a {
+  padding: 20px 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Hover effect on the links */
+.side-nav a:hover {
+  color: #f1f1f1;
+  background-color: #575757;
+}
+
+/* Style for the close button */
+.side-nav .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+/* Responsive side nav (for smaller screens) */
+@media screen and (max-width: 768px) {
+  .side-nav {
+      width: 0;
+      padding-top: 50px;
+  }
+
+  .side-nav a {
+      font-size: 22px;
+      padding: 14px 30px;
+  }
+
+  .side-nav.open {
+      width: 100%;
+  }
+
+  .side-nav .close-btn {
+      top: 15px;
+      right: 20px;
+  }
+}
+
+/* Marquee */
+.marquee {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 5s linear infinite; /* Reduced the time to 5 seconds */
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* ProgramXpert card 3D effect */
+.programxpert-card {
+  perspective: 1000px;
+}
+
+.programxpert-card img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.programxpert-card img:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Input fields and button with 3D effect */
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 24px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Adjust input size on smaller screens */
+@media (max-width: 768px) {
+  input {
+      font-size: 18px;
+      padding: 15px;
+  }
+
+  input[type=submit] {
+      font-size: 16px;
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  input {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  input[type=submit] {
+      font-size: 14px;
+      padding: 10px;
+  }
+}
+
+/* Reduce gap between ProgramXpert and menu items */
+.w3-container h3 {
+  margin-bottom: -40px;
+}
+
+.w3-bar-block .w3-bar-item {
+  padding-top: 30px;
+  padding-bottom: 8px;
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Hover effect for image containers */
+.image-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+/* 3D text effect */
+#dynamic-hello {
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #3498db;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: textAnimation 3s ease-in-out infinite;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  padding-left: 60px;
+
+
+}
+
+@keyframes textAnimation {
+  0% {
+      transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+  }
+  25% {
+      transform: rotateX(20deg) rotateY(10deg) translateZ(20px);
+  }
+  50% {
+      transform: rotateX(0deg) rotateY(30deg) translateZ(40px);
+  }
+  75% {
+      transform: rotateX(20deg) rotateY(40deg) translateZ(60px);
+  }
+  100% {
+      transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+  }
+}
+
+#dynamic-hello:hover {
+  transform: rotateX(360deg) rotateY(360deg);
+  transition: transform 1s ease;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  #dynamic-hello {
+      font-size: 4.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #dynamic-hello {
+      font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  #dynamic-hello {
+      font-size: 2.2em;
+  }
+}
+/* Autocomplete styles */
+.autocomplete {
+  position: relative; /* Required for positioning the suggestion box */
+  width: 100%;
+}
+
+.autocomplete input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Suggestion container (dropdown) */
+.autocomplete-items {
+  position: absolute;
+  top: 100%; /* Position suggestions directly below the input */
+  left: 0;
+  width: 100%; /* Ensure suggestions match the input width */
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto; /* Allow scrolling if there are many suggestions */
+  margin-top: 5px; /* Space between input and suggestions */
+  z-index: 9999; /* Ensure suggestions appear above other content */
+}
+
+/* Individual suggestion items */
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Highlighted suggestion on hover */
+.autocomplete-items div:hover {
+  background-color: #f1f1f1;
+}
+/* Logo container */
+.logo-container {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+/* Style the logo with an automatic flipping effect */
+.logo {
+  width: 100px;  /* Adjust width as needed */
+  height: 100px; /* Set the height equal to width for a perfect circle */
+  border-radius: 50%; /* Makes the logo circular */
+  display: block;
+  margin: 0 auto;  /* Center the logo horizontally */
+  object-fit: cover; /* Ensures the image maintains aspect ratio while filling the circle */
+
+  /* 3D perspective */
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation: flipAnimation 3s infinite linear; /* Automatic flipping animation */
+
+  /* Add shadow for 3D effect */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  animation: rotate 4s infinite linear;
+}

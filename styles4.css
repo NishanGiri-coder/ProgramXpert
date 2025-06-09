@@ -1,0 +1,38 @@
+
+/* Footer Styles */
+footer {
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    width: 100%;
+}
+
+/* Ensure footer links are styled properly */
+footer a {
+    color: white;
+    padding: 10px;
+    text-decoration: none; /* Optional: to remove underline from links */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px; /* Adjust padding for tablets and smaller screens */
+    }
+    
+    footer a {
+        padding: 8px; /* Adjust link padding */
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 12px; /* Further reduce padding for small mobile screens */
+    }
+
+    footer a {
+        padding: 6px; /* Further adjust link padding */
+    }
+}
